@@ -1,2 +1,2 @@
-# ProjetosEstaticos
-Coletânea de apps Java sem uso de banco de dados
+# YoutubeCursosFree
+Coletânea de apps e conceitos acompanhado em tutorias diversas pela Youtube
