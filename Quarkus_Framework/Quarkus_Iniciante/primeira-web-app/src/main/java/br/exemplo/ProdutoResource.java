@@ -1,9 +1,6 @@
 package br.exemplo;
 
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.POST;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.PathParam;
+import jakarta.ws.rs.*;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -30,5 +27,12 @@ public class ProdutoResource {
     public String postNomeProduto(String nomeProduto) {
         LocalDateTime dateTime = LocalDateTime.now();
         return nomeProduto + " foi processado em: " + dateTime.format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH'h'mm'min'ss'seg'")); // formato incluído por conta própria, na aula usou apenas o dateTime
+    }
+
+    @PUT
+    @Path("/nome")
+    public String putNomeProduto(String nomeProduto) {
+        LocalDateTime dateTime = LocalDateTime.now();
+        return nomeProduto + " foi atualizado em: " + dateTime.format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH'h'mm'min'ss'seg'"));
     }
 }
