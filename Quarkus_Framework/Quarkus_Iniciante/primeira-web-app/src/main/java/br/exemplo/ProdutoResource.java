@@ -35,4 +35,11 @@ public class ProdutoResource {
         LocalDateTime dateTime = LocalDateTime.now();
         return nomeProduto + " foi atualizado em: " + dateTime.format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH'h'mm'min'ss'seg'"));
     }
+
+    @DELETE
+    @Path("/{id}")
+    public String deleteProduto(Integer id) {
+        if (id == 1) return "o produto ("+id+") foi excluído com sucesso";
+        return "o produto ("+id+") não existe";
+    }
 }
